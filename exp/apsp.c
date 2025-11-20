@@ -12,7 +12,7 @@ void bellmanFord(int V, int E, Edge edges[], int src, int dist[]) {
         dist[i] = INF;
     dist[src] = 0;
 
-    // Relax all edges V-1 times
+    
     for (int i = 1; i <= V - 1; i++) {
         for (int j = 0; j < E; j++) {
             int u = edges[j].src;
@@ -25,7 +25,6 @@ void bellmanFord(int V, int E, Edge edges[], int src, int dist[]) {
         }
     }
 
-    // Negative cycle check
     for (int j = 0; j < E; j++) {
         int u = edges[j].src;
         int v = edges[j].dest;
@@ -56,7 +55,6 @@ int main() {
 
     int dist[V][V];
 
-    // Run Bellman-Ford from every vertex
     for (int src = 0; src < V; src++) {
         bellmanFord(V, E, edges, src, dist[src]);
     }

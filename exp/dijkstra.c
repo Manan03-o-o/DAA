@@ -197,8 +197,6 @@ int main() {
         int s, d, w;
         scanf("%d %d %d", &s, &d, &w);
         addEdge(graph, s, d, w);
-        // For undirected graph also add reverse edge:
-        // addEdge(graph, d, s, w);
     }
 
     printf("Enter source vertex: ");
