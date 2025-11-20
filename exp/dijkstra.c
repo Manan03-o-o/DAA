@@ -4,7 +4,7 @@
 
 #define INF INT_MAX
 
-// ----------- Min Heap (Priority Queue) ----------------
+
 typedef struct {
     int vertex;
     int dist;
